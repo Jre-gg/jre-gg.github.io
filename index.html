@@ -429,6 +429,7 @@ h1{
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
+    $(document).ready(function(){
     function dropdownOpen(cover, label, content) {
   $(cover).addClass("open").removeClass("close");
   $(label).addClass("labelOpen").removeClass("labelClose");
@@ -476,6 +477,7 @@ $("#shop").click(function () {
 $("#shopClo").click(function () {
   dropdownClose("#shopCover", "#shop", "#shopContent");
 });
+    });
   </script>
 </head>
 
