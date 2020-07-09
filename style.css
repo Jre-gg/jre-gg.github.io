@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  background-image: url(https://i.ibb.co/jZcZgym/DA42-BE5-C-B242-4173-8020-AEA5-FE84-D6-D8.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Lacquer', 'Helvetica', cursive;
+  font-size: 6vw;
+}
+
+svg{
+  stroke-linecap:round; 
+  stroke-linejoin:round; 
+}
+
+#title-wrap{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle{
+  margin-left: 10%;
+}
+
+#arrow{
+  width: 85px;
+  position: fixed;
+  bottom:3%;
+  right: 3%;
+  z-index:100;
+}
+
+#arrow-path1 {
+  stroke-dashoffset: 11.05;
+  stroke-dasharray: 11.05;
+  animation: dash .5s linear forwards;
+  animation-delay: 1.5s;
+}
+
+#arrow-path2 {
+  stroke-dashoffset: 13;
+  stroke-dasharray: 13;
+  animation: dash .5s linear forwards;
+  animation-delay: 2s;
+}
+
+#title-svg{
+  width: 80%;
+}
+
+.bckgrnd{
+  display: flex;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 48vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-svg{
+  width: 50%;
+  margin-left: 1vw;
+}
+
+.link-svg:hover{
+  filter: invert(1);
+}
+
+.icon{
+  width: 16%;
+}
+
+#ptrn-btn-bckgrnd{
+  background-image: url(https://i.ibb.co/KbyfSg4/9043-AB39-281-A-481-A-A146-9-E787-FA6-CBAC.png);
+}
+
+#pypl-btn-bckgrnd{
+  background-image: url(https://i.ibb.co/YBqxcFN/D735692-F-3-B7-C-4300-A8-F4-173-FBAAF6437.png);
+  width: 80%;
+  height: 60vw;
+}
+
+#btcn-btn-bckgrnd{
+  width: 85%;
+  height: 50vw;
+  background-image: url(https://i.ibb.co/WFQpk3C/281-B5206-98-C7-415-D-8743-13-F07-F7394-D6.png);
+}
+
+#btcn-link-svg{
+  width: 62%;
+  margin-bottom: 11vw;
+}
+
+#btcn-link-svg:hover{
+  filter: invert(0);
+}
+
+#btcAddr{
+  position:absolute;
+  transform: translateY(-24vw) translateX(90%);
+  font-size: 5vw;
+  color: #fff;
+}
+
+#btcAddr:hover{
+  text-decoration: underline;
+}
+
+#x-vndl{
+  width:52%;
+  position: absolute;
+  margin-left: 8%;
+  transform: translateY(-6vw);
+  overflow: visible;
+}
+
+#xpath1{
+  stroke-dashoffset: 13.66;
+  stroke-dasharray: 13.66;
+}
+
+.anim{
+  animation: dash .4s linear forwards;
+  animation-delay: 1s;
+}
+
+#xpath2 {
+  stroke-dashoffset: 13.91;
+  stroke-dasharray: 13.91;
+}
+
+#xpath2.anim{
+  animation-delay: .4s;
+}
+
+#oyfs-btn-bckgrnd{
+  width: 95%;
+  height: 54vw;
+  background-image: url(https://i.ibb.co/McL7cTK/onlyfns-Bck.png);
+}
+
+#oyfs-link-svg{
+  width: 65%;
+}
+
+#key{
+  position: absolute;
+  width:20%;
+  transform: translateX(50%) translateY(6vw);
+  stroke-dashoffset: 22.71;
+  stroke-dasharray: 22.71;
+}
+
+#tag1{
+  width: 55%;
+  margin-top: 8vw;
+  margin-left: 10%;
+}
+#tag2{
+  position: absolute;
+  left:15%;
+  z-index:99;
+  width:50%; 
+  overflow: visible;
+}
+
+#tag2path {
+  stroke-dashoffset: 60.5;
+  stroke-dasharray: 60.5;
+}
+
+#tag2path.anim{
+  animation: dash 2s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
