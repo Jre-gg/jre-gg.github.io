@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Contact Page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<div id="app" :class="{'red': choice == 1, 'blue': choice == 2, 'green': choice == 3, 'yellow': choice == 4}">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://i.ibb.co/yknVK8N/My-Drawing-5-sketchpad.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="columns">
+    <div id="title-col" class="column has-text-centered">
+      <div class="title">Contact Jreg</div>
+      <div class="subtitle">Want to take the "para" out of "parasocial"? <br>Fill out the form(s) below.</div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column has-text-centered">
+      <div id="form-select-wrap">
+        <strong>What do you want to talk about?</strong>
+        <div id="drop-wrap">
+          <select id="cars" class="dropdown" v-model="choice">
+            <option value="1">Event Booking</option>
+            <option value="2">Interviews</option>
+            <option value="3">Feedback</option>
+            <option value="4">Sponsorships</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div id="forms" class="column">
+      <div class="card">
+        <p class="content"><i>All fields are required.</i></p>
+        <validation-observer v-slot="{ invalid }">
+          <form v-show="choice == 1" action="https://formspree.io/mqkyadbl" method="POST" class="vv-form-1">
+
+            <div class="field">
+              <validation-provider rules="required|email" v-slot="{ errors, failed }">
+                <label class="label">Email:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="email" v-model="field1" name="Email" placeholder="email@gmail.com"></input>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider rules="required|min:5" v-slot="{ errors, failed }">
+                <label class="label">Transportation Method</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" name="Transportation Method" v-model="trns" placeholder="Plane, train, etc."></input>
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider :rules="{ required: true, regex: /^\d{4}\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$/ }" v-slot="{ errors, failed }">
+                <label class="label">Suggest an event date:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" name="Approx. event date" v-model="date" placeholder="yyyy/mm/dd"></input>
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider rules="required" v-slot="{ errors, failed }">
+                <label class="label">Event topic:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" v-model="topic" name="Topic" placeholder="i.e. 'Politics'"></input>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider rules="required" v-slot="{ errors, failed }">
+                <label class="label">Message:</label>
+                <div class="control has-icons-right">
+                  <textarea class="textarea" :class="{ 'is-danger': failed }" type="text" v-model="field2" name="Message" placeholder="Put a description of the event you are holding, its location, and any other important details here."></textarea>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+            <div class="buttons">
+              <button id="submit" type="submit" class="button submit" :class="{'red': choice == 1, 'blue': choice == 2, 'green': choice == 3, 'yellow': choice == 4}" :disabled="invalid">Send</button>
+            </div>
+          </form>
+        </validation-observer>
+
+        <validation-observer v-slot="{ invalid }">
+          <form v-show="choice == 2" action="https://formspree.io/mqkyadbl" method="POST" class="vv-form-2">
+            <div class="field">
+              <validation-provider rules="required|email" v-slot="{ errors, failed }">
+                <label class="label">Email:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="email" v-model="field1" name="Email" placeholder="email@gmail.com"></input>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+            <div class="field">
+              <validation-provider :rules="{ required: true, regex: /^\d{4}\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$/ }" v-slot="{ errors, failed }">
+                <label class="label">Suggest an interview date:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" name="Approx. event date" v-model="date" placeholder="yyyy/mm/dd"></input>
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+            <div class="field">
+              <validation-provider :rules="{ required: true }" v-slot="{ errors, failed }">
+                <label class="label">Your organization:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" name="Organization" v-model="company" placeholder="Your organization's name"></input>
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider rules="required" v-slot="{ errors, failed }">
+                <label class="label">Interview topic:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" v-model="topic" name="Topic" placeholder="i.e. 'Political YouTubers'"></input>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+            <div class="field">
+              <validation-provider rules="required" v-slot="{ errors, failed }">
+                <label class="label">Message:</label>
+                <div class="control has-icons-right">
+                  <textarea class="textarea" :class="{ 'is-danger': failed }" type="text" v-model="field2" name="Message" placeholder="Give more details about the interview."></textarea>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+
+            <div class="buttons">
+              <button id="submit-button2" type="submit" :class="{'red': choice == 1, 'blue': choice == 2, 'green': choice == 3, 'yellow': choice == 4}" class="button submit" :disabled="invalid">Send</button>
+            </div>
+          </form>
+        </validation-observer>
+
+        <validation-observer v-slot="{ invalid }">
+          <form v-show="choice == 3" action="https://formspree.io/mqkyadbl" method="POST" class="vv-form-3">
+            <div class="field">
+              <validation-provider :rules="{ required: true }" v-slot="{ errors, failed }">
+                <label class="label">Feedback:</label>
+                <div class="control has-icons-right">
+                  <textarea class="textarea" :class="{ 'is-danger': failed }" type="text" name="Feedback" v-model="feedback" placeholder="Pretty self-explanatory"></textarea>
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+            <div class="buttons">
+              <button id="submit-button4" type="submit" :class="{'red': choice == 1, 'blue': choice == 2, 'green': choice == 3, 'yellow': choice == 4}" class="button submit" :disabled="invalid">Send</button>
+            </div>
+          </form>
+        </validation-observer>
+
+        <validation-observer v-slot="{ invalid }">
+          <form v-show="choice == 4" action="https://formspree.io/mqkyadbl" method="POST" class="vv-form-4">
+
+            <div class="field">
+              <validation-provider rules="required|email" v-slot="{ errors, failed }">
+                <label class="label">Email:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="email" v-model="field1" name="Email" placeholder="email@gmail.com">
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+
+            <div class="field">
+              <validation-provider :rules="{ required: true }" v-slot="{ errors, failed }">
+                <label class="label">Company name:</label>
+                <div class="control has-icons-right">
+                  <input class="input" :class="{ 'is-danger': failed }" type="text" name="Company Name" v-model="company" placeholder="Your company's name">
+                  <span v-if="failed" class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{errors[0]}}</p>
+              </validation-provider>
+            </div>
+            <div class="field">
+              <validation-provider rules="required" v-slot="{ errors, failed }">
+                <label class="label">Message:</label>
+                <div class="control has-icons-right">
+                  <textarea class="textarea" :class="{ 'is-danger': failed }" type="text" v-model="field2" name="Message" placeholder="Give details about the product(s) you want to promote and any other important details."></textarea>
+                  <span v-if="failed" class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p v-if="failed" class="help is-danger">{{ errors[0] }}</p>
+              </validation-provider>
+            </div>
+
+            <div class="buttons">
+              <button id="submit-button3" type="submit" :class="{'red': choice == 1, 'blue': choice == 2, 'green': choice == 3, 'yellow': choice == 4}" class="button submit" :disabled="invalid">Send</button>
+            </div>
+          </form>
+        </validation-observer>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-page-footer" class="columns">
+    <div class="column has-text-centered">
+      <div class="content">
+        Looking for Centricide IP instructions?
+        <br>
+        <a href="#">Click here.</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vee-validate/3.2.5/vee-validate.full.min.js'></script>
+<script src='https://unpkg.com/buefy/dist/buefy.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
