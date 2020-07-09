@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+/*axe title css*/
+.title {
+  position: relative;
+  background: #22395d;
+  color: #fff;
+  -webkit-transform: rotate(10deg) translateX(5px) translateY(9vw);
+          transform: rotate(10deg) translateX(5px) translateY(9vw);
+  max-width: 500px;
+  margin: auto;
+}
+
+.title::before {
+  position: absolute;
+  padding: 0.2rem;
+  width: 86px;
+  height: 150px;
+  overflow: hidden;
+  right: 25px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  z-index: 999;
+  content: "Despite making up only 0.0001% of all subreddits, r/Jreg makes 1000% of all fanart.";
+  /*shape-inside: circle(50px at 10px 10px);*/
+}
+
+.title::after {
+  background: #808080;
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 0;
+  right: -26px;
+  content: " ";
+  -webkit-clip-path: url(#a);
+          clip-path: url(#a);
+}
+
+/*select css*/
+label {
+  font-family: "Verdana", sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  border: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  background: rgba(12, 70, 204, 0.4);
+  height: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Verdana", sans-serif;
+}
+
+#mode {
+  width: 70px;
+  margin-left: 10px;
+}
+
+#timeSelect {
+  width: 120px;
+}
+
+.selectWrap{
+  position: relative;
+}
+
+.selectWrap::after {
+  position: absolute;
+  cursor: pointer;
+  content: "▼";
+  color: #fff;
+  height: 10px;
+  width: 10px;
+  top: 4px;
+  right: 10px;
+}
+
+#timeSelWrap{
+  position: absolute;
+  left: 160px;
+}
+
+#galleryControls{
+  margin-bottom: -5px;
+}
+
+/*help*/
+#help-text {
+  margin-top: 230px;
+  margin-bottom: 20px;
+}
+
+/*gallery*/
+.grid {
+  margin-top:20px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  background: #ddd;
+  width: 100%;
+  height: 100%;
+}
+
+/* clear fix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*bricks (artwork)*/
+.grid-sizer,
+.grid-item {
+  float: left;
+  height: 33%;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*help button*/
+#hn {
+  display: block;
+  position: fixed;
+  width: 130px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background-image: url("https://i.ibb.co/xscprNK/sleep-hn.png")
+    /*url("https://i.ibb.co/607hY83/My-Drawing-1-sketchpad-8-min.png")*/;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.speech-bubble {
+  padding: 0.1rem;
+  right: 15px;
+  bottom: 20px;
+  position: fixed;
+  background: #000;
+  color: #fff;
+  z-index: 100;
+}
+
+/*image modal*/
+#imgDscrptn {
+  background: #f5f6f5;
+}
+
+@media (min-width: 1000px) {
+  .title{
+    width: 700px;
+    max-width: 700px;
+    font-size: 32px;
+    -webkit-transform: rotate(10deg) translateY(60px);
+            transform: rotate(10deg) translateY(60px);
+  }
+  select{
+   margin-top: 240px;
+ }
+  .title::before{
+    text-align:center;
+    width:110px;
+    height: 190px;
+    right: 38px;
+    font-size: 18px;
+  }
+  .title::after{
+    width: 240px;
+    height: 240px;
+  }
+}
