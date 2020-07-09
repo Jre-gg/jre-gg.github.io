@@ -1,3 +1,4 @@
+$(document).ready(function(){
 function isElementOutViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
@@ -77,4 +78,5 @@ var btc = "bc1qk608lg4f9n687jj7v962vq9ldalzwzyjrmcqv9";
 
 $("#btcAddr").click(function () {
   copyTextToClipboard(btc);
+});
 });
