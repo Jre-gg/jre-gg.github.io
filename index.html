@@ -1,102 +1,65 @@
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/index.js"></script>
-</head>
-
-<div id="home">
-  <div id="compass">
-    <div id="commie" class="under">
- </div>
-
-    <div id="videoCover" class="cover">
-      <div id="videoContent" class="contentClose auth">
-        <div id="videoflavorText" class="hide">"Русский текст"</div>
-        <ul>
-          <li> Print Money! </li>
-          <li> Centricide </li>
-          <li> sorry </li>
-        </ul>
-        <button id="vidClo" @click="closeCover(videoCover,0)" class="close">Close</button>
-      </div>
-    </div>
-    <div id="videos" class="label labelClose">Videos</div>
-
-    <div id="racist" class="under">
-      </div>
-
-    <div id="blueCover" class="cover">
-      <div id="blueContent" class="contentClose auth">
-        <div id="blueflavorText" class="hide">[removed]</div>
-        <ul>
-          <li>Dear Compatriots...</li>
-          <li>Look away</li>
-          <li>Rule of 3</li>
-        </ul>
-        <button id="blueClo" @click="closeCover(blueCover,90)" class="close">Close</button>
-      </div>
-    </div>
-
-    <div><span id="annou" class="label labelClose">Fanart</span></div>
-
-    <div id="void">
-      <h1>*logo*</h1>
-      <a href="https://www.instagram.com/greg.guevara/" target="_blank" id="instaLink">
-        <div id="instaBack" class="socMedia">
-          <span class="fab fa-instagram" id="instaIcon"> </span>
-        </div>
-      </a>
-      <a href="https://twitter.com/mc_swm" target="_blank" id="twitLink">
-        <div id="twBack" class="socMedia">
-          <i class="fab fa-twitter" id="twitIcon"></i>
-        </div>
-      </a>
-    </div>
-
-    <div id="ancom" class="under"></div>
-
-    <div id="donateCover" class="cover">
-      <div id="donateContent" class="contentClose">
-        <button id="donaClo" class="close">Close</button>
-        <div id="giveMoney">"Give me <br>all money!"</div>
-        <div id="patreonWrap">
-          <a id="patreonIcon" href="https://www.patreon.com/bePatron?u=20980679" target="_blank"><i class="fab fa-patreon"></i> Patreon</a></div>
-        <div id="palWrap">
-          <a id="paypalIcon" href="https://www.paypal.me/gregguevara" target="_blank"><i id="palIconImage" class="fab fa-paypal"></i> PayPal</a>
-        </div>
-      </div>
-    </div>
-
-    <div><span id="donate" class="label labelClose">Donate</span></div>
-
-    <div id="ancap" class="under">
-      </div>
-
-    <div id="shopCover" class="cover">
-      <div id="shopContent" class="contentClose">
-        <button id="shopClo" class="close">Close</button>
-        <div id="notforFree">"Ew, not for free!"</div>
-        <div id="shopMenuWrap">
-          <ul>
-            <li>Shirts &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</li>
-            <li>Shoes</li>
-            <li>Nukes</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div><span id="shop" class="label">Shop</span></div>
-  </div>
+<div id="title-wrap">
+  <img id="title-svg" src="https://rb.gy/6kpbaa" />
 </div>
-<svg viewBox="0 0 250 250">
+<div class="subtitle">
+  GIVE ME $$$...please?
+</div>
+
+<svg id="arrow" viewBox="0 0 12 14">
   <defs>
-    <clippath id="a" clipPathUnits="objectBoundingBox" transform="scale(0.004 0.004)">
-      <path id="test" d="M0,0 V270 H128 V170.5 H224 V25.5 Z" />
-    </clippath>
+    <filter x="-250%" y="-50%" width="620%" height="200%" id="f4">
+      <feGaussianBlur in="SourceGraphic" stdDeviation=".34" />
+    </filter>
   </defs>
+  <path id="arrow-path1" filter="url(#f4)" stroke="#020" stroke-width="1.2" fill="transparent" d="M 6 1 c -1 4 0 5 0 11"></path>
+  <path id="arrow-path2" filter="url(#f4)" stroke="#020" stroke-width="1.2" fill="transparent" d="M 2 8 c 1 2 3 2 4 5 c 3 -5 2 -3 4 -5"></path>
+</svg>
+
+<a href="https://rb.gy/2mnnn6" id="ptrn-btn-bckgrnd" class="bckgrnd">
+  <img id="ptrn-icon" class="icon" src="https://i.ibb.co/6JpDnN1/BFCD9822-24-C4-4-F0-D-BD0-B-607-A162-EC3-D1.png" alt="Ptrn-icon" border="0" />
+  <img id="ptrn-link-svg" class="link-svg" src="https://rb.gy/a851gh" />
+</a>
+
+<a href="https://rb.gy/kkzvww" id="pypl-btn-bckgrnd" class="bckgrnd">
+  <img id="pypl-icon" class="icon" src="https://i.ibb.co/9bkKSC5/4-E9-C671-C-AF08-48-EF-B871-34761112-A72-E.png" alt="4-E9-C671-C-AF08-48-EF-B871-34761112-A72-E" border="0" />
+  <img id="pypl-link-svg" class="link-svg" src="https://rb.gy/lahbqb" />
+</a>
+
+<div id="btcn-btn-bckgrnd" class="bckgrnd">
+  <img id="btcn-icon" class="icon" src="https://i.ibb.co/028GGsN/A944-BBBA-6376-4-A6-D-81-FF-E092877277-D1.png" alt="A944-BBBA-6376-4-A6-D-81-FF-E092877277-D1" border="0" />
+  <img id="btcn-link-svg" class="link-svg" src="https://rb.gy/ljevdv" />
+  <svg id="x-vndl" viewBox="0 0 15 6">
+    <defs>
+      <filter y="-20%" height="135%" id="f2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation=".3" />
+      </filter>
+    </defs>
+    <path id="xpath1" class="path" filter="url(#f2)" stroke="#040" stroke-width=".75" fill="transparent" d="M 1 1 c 7 3 10 2 13 4"></path>
+    <path id="xpath2" filter="url(#f2)" stroke="#040" stroke-width=".75" fill="transparent" d="M 1 5 c 10 -4 11 -1 13 -4" />
+  </svg>
+</div>
+<a id="btcAddr">Copy BTC Address</a>
+
+<svg id="key" viewBox="0 0 12 15">
+  <defs>
+    <filter x="-20%" width="135%" id="f3">
+      <feGaussianBlur in="SourceGraphic" stdDeviation=".4" />
+    </filter>
+  </defs>
+  <path id="path1" filter="url(#f3)" stroke="#040" stroke-width="1.4" fill="transparent" d="M 2 3 c 8 -6 9 6 4 5 c 0 0 -3 -3 -1 6"></path>
+</svg>
+<a href="https://onlyfans.com/jregory" id="oyfs-btn-bckgrnd" class="bckgrnd">
+  <img id="oyfs-icon" class="icon" src="https://i.ibb.co/qRYz3zF/ofsIcon.png" alt="A944-BBBA-6376-4-A6-D-81-FF-E092877277-D1" border="0" />
+  <img id="oyfs-link-svg" class="link-svg" src="https://rb.gy/lxxrkp" />
+</a>
+
+<img id="tag1" src="https://rb.gy/9fsyj6" />
+
+<svg id="tag2" viewBox="0 0 12 11">
+  <defs>
+    <filter id="f1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation=".2" />
+    </filter>
+  </defs>
+  <path id="tag2path" class="path" filter="url(#f1)" stroke="#040" stroke-width=".75" fill="transparent" d="m 3 10 c 5 -16 3 -9 5 0 c 0 -1 1 -5 -6 -7 c 0 10 8 7 9 4 c -3 5 -10 4 -10 -4"></path>
 </svg>
