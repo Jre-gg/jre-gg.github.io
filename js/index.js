@@ -30,14 +30,14 @@ $("#blueClo").click(function () {
   dropdownClose("#blueCover", "#annou", "#blueContent");
   $("#blueflavorText").addClass("hide");
 });
-
+/*
 $("#donate").click(function () {
   dropdownOpen("#donateCover", "#donate", "#donateContent");
 });
 
 $("#donaClo").click(function () {
   dropdownClose("#donateCover", "#donate", "#donateContent");
-});
+});*/
 
 $("#shop").click(function () {
   dropdownOpen("#shopCover", "#shop", "#shopContent");
