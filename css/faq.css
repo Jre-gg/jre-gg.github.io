@@ -1,0 +1,135 @@
+/*thanks Brenden Palmer for accordion code*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+p:first-of-type {
+  font-style: italic;
+}
+
+p:nth-of-type(2n){
+  font-weight: bold;
+}
+
+.description {
+  margin: 1em auto 2.25em;
+}
+
+.container {
+  width: 70%;
+  margin: 1.5em auto;
+  color: #333;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+
+ul .inner.show {
+  /*display: block;*/
+}
+
+ul li {
+  margin: .5em 0;
+}
+
+ul li a.toggle{
+  width: 100%;
+  display: block;
+  animation: change-background 8s infinite;
+  color: #fefefe;
+  opacity: .7;
+  padding: .75em;
+  font-weight: bold;
+}
+
+h2{
+  color: rgb(0,0,0,.67);
+}
+/*
+#test a.toggle{
+  animation: change-background 8s infinite;
+}*/
+
+/*
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}*/
+
+.navbar{
+  color:white;
+}
+
+#logo{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.current-page{
+  font-weight: 700;
+ /* background: #555;*/
+}
+
+.faq.red{
+  color: red;
+}
+
+.faq.green{
+  color: green;
+}
+
+.faq.blue{
+  color: blue;
+}
+
+.faq.purple{
+  color: purple;
+}
+
+.toggle.red{
+  background-color: red;
+}
+
+.toggle.green{
+  background-color: green;
+}
+
+.toggle.blue{
+  background-color: blue;
+}
+
+.toggle.purple{
+  background-color: purple;
+}
+
+.inner li a.toggle{
+  opacity: .9;
+}
+
+h2{
+  font-weight: bold;
+}
