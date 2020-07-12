@@ -1,22 +1,33 @@
-Vue.component("validation-provider", VeeValidate.ValidationProvider);
-Vue.component("validation-observer", VeeValidate.ValidationObserver);
+$(document).ready(function () {
+  var activeForm = $("#form1");
+  var activeBackgroundClass = "red";
+  var page = $("#app");
+  $(".form").hide();
+  $("#form1").show();
+  //all fields are required
+  $("input, textarea").prop("required", true).addClass("f");
 
-var forms = new Vue({
-  el: "#app",
-  data: {
-    field1: null,
-    field2: null,
-    activeTab: 0,
-    feedback: null,
-    topic: null,
-    company: null,
-    //transport
-    trns: null,
-    date: null,
-    slideNum: 1,
-    start: false,
-    bckwrd: false,
-    baColor:" ",
-    choice: 1
+  $("#formSel").on("change", formChange);
+
+  function formChange() {
+    activeForm.hide();
+    page.removeClass(activeBackgroundClass);
+    activeForm = $($(this).val());
+    activeBackgroundClass = $(this).find("option:selected").data("class");
+    activeForm.show();
+    page.addClass(activeBackgroundClass);
   }
+
+  //validate form
+  $("form").each(function () {
+    $(this).validate({
+      errorClass: "error",
+      highlight: function (element, errorClass) {
+        $(element).closest(".f").addClass("is-danger");
+      },
+      unhighlight: function (element, errorClass) {
+        $(element).closest(".f").removeClass("is-danger");
+      }
+    });
+  });
 });
