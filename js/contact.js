@@ -1,7 +1,6 @@
 $(document).ready(function () {
   var activeForm = $("#form1");
   var activeBackgroundClass = "red";
-  var page = $("#app");
   $(".form").hide();
   $("#form1").show();
   //all fields are required
@@ -10,12 +9,14 @@ $(document).ready(function () {
   $("#formSel").on("change", formChange);
 
   function formChange() {
+    //page and submit button selector
+    var s = $("#app,.submit");
     activeForm.hide();
-    page.removeClass(activeBackgroundClass);
+    s.removeClass(activeBackgroundClass);
     activeForm = $($(this).val());
     activeBackgroundClass = $(this).find("option:selected").data("class");
     activeForm.show();
-    page.addClass(activeBackgroundClass);
+    s.addClass(activeBackgroundClass);
   }
 
   //validate form
