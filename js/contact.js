@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   function formChange() {
     //page and submit button selector
-    var s = $("#app,.submit");
+    var s = $("#app");
     activeForm.hide();
     s.removeClass(activeBackgroundClass);
     activeForm = $($(this).val());
