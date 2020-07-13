@@ -9,11 +9,6 @@
   font-family: 'Helvetica Neue',Helvetica,sans-serif;
 }
 
-body {
-  /* animation-duration: 3s;
-   animation-fill-mode: forwards;*/
-}
-
 .columns {
   margin-top: 0px;
   margin-left: auto;
@@ -146,14 +141,10 @@ select::-ms-expand {
 
 #app.blue {
   background: #6b6bff;
-  /*animation: blueFade ease 3s 1;
-   animation-fill-mode: forwards;*/
 }
 
 #app.green {
   background: #009600;
-  /*animation: greenFade ease 3s 1;
-   animation-fill-mode: forwards;*/
 }
 
 #app.yellow {
@@ -166,25 +157,21 @@ select::-ms-expand {
 }
 
 *::-webkit-input-placeholder {
-  /* modern browser */
   color: #eee !important;
   font-family: "Avenir", Helvetica,sans-serif !important;
 }
 
 *::-moz-placeholder {
-  /* modern browser */
   color: #eee !important;
   font-family: "Avenir", Helvetica,sans-serif !important;
 }
 
 *:-ms-input-placeholder {
-  /* modern browser */
   color: #eee !important;
   font-family: "Avenir", Helvetica,sans-serif !important;
 }
 
 *::-ms-input-placeholder {
-  /* modern browser */
   color: #eee !important;
   font-family: "Avenir", Helvetica,sans-serif !important;
 }
