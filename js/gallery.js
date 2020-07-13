@@ -30,7 +30,6 @@ $(document).ready(function () {
   });
   $("body").on("click", ".speech-bubble, #hn", function (e) {
     alert("Taking a beauty nap...sorry~");
-    /*$("body").chardinJs("start").refresh();*/
   });
 });
 
@@ -114,6 +113,39 @@ function timeSelChange() {
   loadImg();
 }
 
+function refresh() {
+  $(".grid").isotope("layout");
+  delayApi = false;
+  changeTutorialImg();
+  if (wall.width() < container.width() && sortTime != "day") {
+    test += 1;
+    $(".ttt").html(test);
+    loadImg();
+  }
+}
+//api stuff
+var param;
+function paramSet() {
+  if (topOrNew == "top") {
+    param = {
+      t: sortTime,
+      sort: "top",
+      q: "flair:fanart",
+      limit: 10,
+      restrict_sr: true,
+      after: after
+    };
+  } else {
+    param = {
+      sort: "new",
+      q: "flair:fanart",
+      limit: 10,
+      restrict_sr: true,
+      after: after
+    };
+  }
+}
+
 function minUrl() {
   var res;
   var user;
@@ -155,50 +187,33 @@ function minUrl() {
   min = "https://img.gs/" + user + "/" + size + "," + res + ",quality=low/";
 }
 
-function refresh() {
-  $(".grid").isotope("layout");
-  delayApi = false;
-  changeTutorialImg();
-  //$(".ttt").html(container.width());
-  if (wall.width() < container.width() && sortTime != "day") {
-    test += 1;
-    $(".ttt").html(test);
-    // delayApi=false;
-    loadImg();
+function loadImg() {
+  paramSet();
+  minUrl();
+  if (!delayApi) {
+    delayApi = true;
+    if (after != null) {
+      $.ajax({
+        url: "https://www.reddit.com/r/jreg/search.json",
+        type: "get",
+        data: param,
+        success: function (response) {
+          apiProcessing(response);
+        },
+        error: function (xhr) {
+          console.log("err");
+        }
+      });
+    } else {
+      alert(
+        "You've reached the end. Congratulations? (Change the sort parameters for more)"
+      );
+    }
   }
 }
-
-function changeTutorialImg() {
-  $(".grid-item:first").attr(
-    "data-intro",
-    "zzzzzzz Click to enlarge...~ zzzzzzzzz"
-  );
-  $(".grid-item:first").attr("data-position", "right");
-  //$('body').chardinJs('start').refresh();
-}
-//api related stuff
-
-var param;
-function paramSet() {
-  if (topOrNew == "top") {
-    param = {
-      t: sortTime,
-      sort: "top",
-      q: "flair:fanart",
-      limit: 10,
-      restrict_sr: true,
-      after: after
-    };
-    // return t;
-  } else {
-    param = {
-      sort: "new",
-      q: "flair:fanart",
-      limit: 10,
-      restrict_sr: true,
-      after: after
-    };
-  }
+//get images and add to dom
+function arrayContains(needle, arrhaystack) {
+  return arrhaystack.indexOf(needle) > -1;
 }
 
 function apiProcessing(response) {
@@ -242,54 +257,20 @@ function appendImgs() {
       "<div id=" + z + " " + "class='grid-item'><img src=" + u + "></img></div>"
     );
     wall.append($content).isotope("appended", $content);
-    //wall.imagesLoaded(refresh);
   }
   wall.imagesLoaded(refresh);
   prvImgSet += 10;
   curImgSet += 10;
 }
 
-function loadImg() {
-  paramSet();
-  minUrl();
-  // console.log(param);
-  if (!delayApi) {
-    delayApi = true;
-    if (after != null) {
-      $.ajax({
-        url: "https://www.reddit.com/r/jreg/search.json",
-        type: "get", //send it through get method
-        data: param,
-        success: function (response) {
-          apiProcessing(response);
-        },
-        error: function (xhr) {
-          //Do Something to handle error
-          console.log("err");
-        }
-      });
-    } else {
-      alert(
-        "You've reached the end. Congratulations? (Change the sort parameters for more)"
-      );
-      // delayApi=false;
-    }
-    // delayApi = true;
-  }
-}
 
-function arrayContains(needle, arrhaystack) {
-  return arrhaystack.indexOf(needle) > -1;
-}
+//load images when user has scrolled within 200px of the right edge of the "wall"
 
 var elem = $("#slide");
 var inner = $("#grid");
 
 elem.scroll(function () {
   if (elem.scrollLeft() + elem.width() + 200 >= inner.width()) {
-    // setTimeout(loadImg, 500);
     loadImg();
-    // delayApi = true;
-    // console.log("9494");
   }
 });
