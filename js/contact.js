@@ -24,9 +24,11 @@ $(document).ready(function () {
     $(this).validate({
       errorClass: "error",
       highlight: function (element, errorClass) {
+        $(element).addClass("error");
         $(element).closest(".f").addClass("is-danger");
       },
       unhighlight: function (element, errorClass) {
+        $(element).removeClass("error");
         $(element).closest(".f").removeClass("is-danger");
       }
     });
