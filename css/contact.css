@@ -99,11 +99,11 @@ select::-ms-expand {
 }
 
 .submit {
-  border: none;
+  border: #fff;
   border-radius: 20px;
-  color: #fff;
+  color: #000;
 }
-
+/*
 .submit.red {
   background: -webkit-gradient(linear, left top, left bottom, from(#fbb), to(#ff0000));
   background: linear-gradient(#fbb, #ff0000);
@@ -122,7 +122,7 @@ select::-ms-expand {
 .submit.yellow {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffff50), to(#f5af00));
   background: linear-gradient(#ffff50, #f5af00);
-}
+}*/
 
 #title-col {
   padding: 3rem;
