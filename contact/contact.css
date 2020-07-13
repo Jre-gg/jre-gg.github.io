@@ -1,6 +1,7 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap');
 .title, button, .field {
-  font-family: 'Avenir', Trebuchet MS, sans-serif;
+  font-family: Muli,Avenir, Trebuchet MS, sans-serif;
   font-size: 40px;
   font-weight: 800;
 }
@@ -87,7 +88,7 @@ select::-ms-expand {
   margin-bottom: .7rem;
   width: 220px;
   height: 2.6rem;
-  font-size: 1rem;
+t  font-size: 1rem;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   border: 0;
@@ -158,28 +159,28 @@ select::-ms-expand {
 
 *::-webkit-input-placeholder {
   color: #eee !important;
-  font-family: "Avenir", Helvetica,sans-serif !important;
+  font-family: Muli, "Avenir", Trebuchet MS,sans-serif !important;
 }
 
 *::-moz-placeholder {
   color: #eee !important;
-  font-family: "Avenir", Helvetica,sans-serif !important;
+  font-family: Muli, "Avenir", Trebuchet MS,sans-serif !important;
 }
 
 *:-ms-input-placeholder {
   color: #eee !important;
-  font-family: "Avenir", Helvetica,sans-serif !important;
+  font-family: Muli, "Avenir", Trebuchet MS,sans-serif !important;
 }
 
 *::-ms-input-placeholder {
   color: #eee !important;
-  font-family: "Avenir", Helvetica,sans-serif !important;
+  font-family: Muli, "Avenir", Trebuchet MS,sans-serif !important;
 }
 
 *::placeholder {
   /* modern browser */
   color: #eee !important;
-  font-family: "Avenir", Helvetica,sans-serif !important;
+  font-family: Muli, "Avenir", Trebuchet MS,sans-serif !important;
 }
 
 #form-select-wrap {
@@ -192,7 +193,7 @@ select::-ms-expand {
 }
 
 label {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica,sans-serif;
   color: #eee !important;
 }
 
