@@ -41,7 +41,7 @@ select {
   outline: 0;
   box-shadow: none;
   background-image: none;
-  font-family: 'Avenir', sans-serif;
+  font-family: Muli,Avenir,Trebuchet MS, sans-serif;
 }
 
 option {
