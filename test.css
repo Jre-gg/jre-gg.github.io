@@ -28,11 +28,11 @@
   font-family: 'League Gothic Condensed', sans-serif;
   /*font-weight: 700;*/
   display: inline-block;
-  transform: scale(1, 1.3);
+  transform: scale(1, 1);
 }
 
 .red {
-  color: red;
+  color: blue;
 }
 
 .yellow {
