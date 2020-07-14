@@ -1,0 +1,36 @@
+.c {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  border: red solid 1px;
+  background: #333;
+}
+
+.c > div {
+  border: purple solid 1px;
+  flex: 1;
+  /*grow*/
+}
+
+.h2 {
+  color: #eee;
+  margin: 8px;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  transform: scale(1, 1.8);
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.disp {
+  font-size: 40px;
+  font-family: 'Pangolin', cursive;
+}
