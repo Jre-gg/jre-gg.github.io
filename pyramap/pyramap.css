@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Nunito Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Nunito Bold'), local('Nunito-Bold'), url(/fonts/nunitoBold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* general */
 .container {
   width: 100%;
@@ -12,7 +21,7 @@ body{
 /* header stuff */
 .title {
   font-size: 7vmin;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Bold", sans-serif;
   font-weight: bold;
 }
 
@@ -40,7 +49,7 @@ body{
 /* modal */
 
 .modal-card-title {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Bold", sans-serif;
   font-weight: bold;
 }
 
@@ -128,14 +137,10 @@ body{
   -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
   transform: translateY(-37vmin);
   display: inline-block;
-  /*top: 14px;*/
   width: 51.6vmin;
   height: 33.5vmin;
-  /* border: red solid 3px;*/
   background: gray;
   opacity: 0.25;
-  /*padding:0;
-  margin:0;*/
 }
 
 .base div {
@@ -208,13 +213,6 @@ body{
   background: transparent;
   font-size: 4.5vmin;
 }
-/*
-.cube > div:nth-child(5) p {
-    text-align: center;
-    font-size: .7em;
-    margin: 10px;
-    line-height: 15px;
-}*/
 
 #top {
   display: flex;
