@@ -35,7 +35,6 @@ svg {
   font-weight: normal;
   z-index: 999;
   content: "Despite making up only 0.0001% of all subreddits, r/Jreg makes 1000% of all fanart.";
-  /*shape-inside: circle(50px at 10px 10px);*/
 }
 
 .title::after {
@@ -157,8 +156,7 @@ select {
   bottom: 0;
   right: 0;
   z-index: 99;
-  background-image: url("https://i.ibb.co/xscprNK/sleep-hn.png")
-    /*url("https://i.ibb.co/607hY83/My-Drawing-1-sketchpad-8-min.png")*/;
+  background-image: url("https://i.ibb.co/xscprNK/sleep-hn.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
