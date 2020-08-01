@@ -4,8 +4,7 @@ if (window.innerWidth > 350){
   $("#curve").attr("d","M 5 110 C 100 133 231 132 325 72");
   $("#curve2").attr("d","M 5 70 C 100 92 231 93 332 32");
 }
-}
-);
+
 $.ajax({
   url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key=AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg",
   type: "get",
@@ -55,4 +54,5 @@ $.ajax({
       }
     }, 1000);
   }
+});
 });
