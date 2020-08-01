@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: url("https://i.ibb.co/dkBdwb4/3920-CF1-A-2795-4-EE4-9-BD9-82-C2411-BE9-FB.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  font-family: Roboto Slab, sans-serif;
+}
+
+#banner {
+  background: #d00;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  display: block;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 400px;
+  height: 188px;
+  -webkit-clip-path: url("#b");
+          clip-path: url("#b");
+}
+
+#symbol {
+  margin-top: 18px;
+  width: 75px;
+  float: left;
+}
+
+#titleSvg {
+  overflow: visible;
+  margin-top: 14px;
+  width: 270px !important;
+  height: 130px !important;
+}
+
+.bannerTxt {
+  font-size: 26px;
+  fill: #eee;
+}
+
+#posterWrap {
+  -webkit-filter: drop-shadow(0px 9px 7px #111) grayscale(15%);
+          filter: drop-shadow(0px 9px 7px #111) grayscale(15%);
+}
+
+#poster {
+  width: 400px;
+  height: 500px;
+  margin-bottom: 30px;
+  background: #f5f8de;
+  display: block;
+  margin: auto;
+  -webkit-clip-path: polygon(0% 0%, 0% 95%, 7% 100%, 100% 100%, 100% 0%, 55% 0%, 56% 7%, 52% 2%, 35% 0%);
+          clip-path: polygon(0% 0%, 0% 95%, 7% 100%, 100% 100%, 100% 0%, 55% 0%, 56% 7%, 52% 2%, 35% 0%);
+}
+
+.shadow {
+  width: 100%;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+          clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+
+.quarter {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#daysW {
+  top: 0;
+  left: 0;
+}
+
+#hrsW {
+  top: 0;
+  left: 50%;
+}
+
+#minW {
+  top: 50%;
+  left: 0;
+}
+
+#secW {
+  top: 50%;
+  left: 50%;
+}
+
+#wrap {
+  position: relative;
+  width: 400px;
+  height: 380px;
+}
+
+.square {
+  border: #111 solid 3px;
+  width: 100px;
+  height: 100px;
+}
+
+.label {
+  line-height: 68px;
+  font-size: 18px;
+  color: #333;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.digit {
+  font-size: 46px;
+  line-height: 28px;
+  color: #b30000;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+#footer {
+  height: 108px;
+  padding: 5px;
+  font-size: 36px;
+  color: #b30000;
+  text-align: center;
+}
+
+#wrap,
+#footer {
+  opacity: 0.7;
+}
+
+@media (max-width: 350px) {
+  #poster,
+  .shadow {
+    width: 300px;
+    height: 375px;
+  }
+
+  #banner {
+    background: #d00;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    display: block;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 320px;
+    height: 150px;
+    -webkit-clip-path: url("#a");
+            clip-path: url("#a");
+  }
+
+  #symbol {
+    margin-top: 14px;
+    width: 60px;
+    float: left;
+  }
+
+  #titleSvg {
+    margin-top: 14px;
+    width: 220px !important;
+    height: 130px;
+  }
+
+  .bannerTxt {
+    font-size: 28px;
+    fill: #eee;
+  }
+
+  .shadow {
+    -webkit-clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+            clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+  }
+
+  #wrap {
+    width: 300px;
+    height: 260px;
+  }
+}
