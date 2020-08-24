@@ -117,11 +117,10 @@ select {
 
 /*gallery*/
 .grid {
-  margin-top:20px;
   overflow-x: scroll;
   white-space: nowrap;
   background: #ddd;
-  width: 100%;
+  width: 110%;
   height: 100%;
 }
 
