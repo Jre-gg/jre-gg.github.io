@@ -117,6 +117,7 @@ select {
 
 /*gallery*/
 .grid {
+  border: green solid 2px;
   overflow-x: scroll;
   white-space: nowrap;
   background: #ddd;
