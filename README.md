@@ -1,3 +1,4 @@
-# jreg.github.io
+# jre-gg.github.io
 
-Test test i have no idea what I'm doing
+Website for a certain anti-centrist.
+

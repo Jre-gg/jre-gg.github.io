@@ -6,7 +6,7 @@ if (window.innerWidth > 350){
 }
 
 $.ajax({
-  url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key=AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg",
+  url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key="+process.env.YT_API_KEY,
   type: "get",
   success: function (response) {
     var dates=[];
