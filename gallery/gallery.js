@@ -90,7 +90,7 @@ function showLoading() {
 }
 
 function hideLoading() {
-  $("#loading").hide();
+  $("#packing,#loading").hide();
 }
 
 function toggleTimeSelect() {
@@ -117,6 +117,7 @@ function refresh() {
   $(".grid").isotope("layout");
   delayApi = false;
   changeTutorialImg();
+  hideLoading();
   if (wall.width() < container.width() && sortTime != "day") {
     test += 1;
     $(".ttt").html(test);
@@ -192,6 +193,7 @@ function loadImg() {
   minUrl();
   if (!delayApi) {
     delayApi = true;
+    showLoading();
     if (after != null) {
       $.ajax({
         url: "https://www.reddit.com/r/jreg/search.json",
