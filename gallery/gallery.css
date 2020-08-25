@@ -197,11 +197,13 @@ select {
   background: #292664;
 }
 .spinnerWrap {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  overflow: hidden;
-  background: rgba(0,0,0,0);
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .spinner {
   width: 100%;
@@ -230,7 +232,7 @@ select {
 .grid-item {
   float: left;
   height: 31%;
-  margin: .8vh;
+  margin: .7vh;
 }
 
 .grid-item img {
