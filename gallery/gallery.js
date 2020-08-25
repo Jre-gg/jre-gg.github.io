@@ -90,7 +90,7 @@ function showLoading() {
 }
 
 function hideLoading() {
-  $("#packing,#loading").hide();
+  $("#loading").hide();
 }
 
 function toggleTimeSelect() {
