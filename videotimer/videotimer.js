@@ -5,8 +5,10 @@ if (window.innerWidth > 350){
   $("#curve2").attr("d","M 5 70 C 100 92 231 93 332 32");
 }
 
+var apiKey = "AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg";
+  
 $.ajax({
-  url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key="+process.env.YT_API_KEY,
+  url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key="+apiKey,
   type: "get",
   success: function (response) {
     var dates=[];
