@@ -153,7 +153,7 @@ function noPlayAnim() {
 }
 
 function getLatestVid() {
-  var apiKey = "AIzaSyDJHhBXf64SmXO57JILxoPj4obJ_MgKxj8";
+  var apiKey = "AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg";
   $.ajax({
     url:
       "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key=" +
@@ -174,12 +174,3 @@ function getLatestVid() {
     }
   });
 }
-/*var compare = function (a, b) {
-    if (a.date < b.date) {
-      return 1;
-    }
-    if (a.date > b.date) {
-      return -1;
-    }
-    return 0;
-  };*/
