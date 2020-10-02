@@ -4,7 +4,7 @@ $(function () {
   var scrHeight = $(window).height();
   var scrRatio = scrWidth / scrHeight;
   var playAnim = localStorage.getItem("play");
-  console.log(scrRatio);
+  
   $("#menuBtn").click(function () {
     if (!menuActive) {
       $("#menuBtn, #links").addClass("active");
