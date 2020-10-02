@@ -1,0 +1,350 @@
+:root {
+  --crossSize: 30vmin;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+body {
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+#window {
+  width: 100vw;
+  height: 100vw;
+  margin: auto;
+  position: relative;
+}
+#window:after {
+  display: inline-block;
+  content: " ";
+  width: 50vw;
+  height: 100%;
+}
+#window #card {
+  position: absolute;
+  width: 44vw;
+  height: 44vw;
+  top: 28vw;
+  left: 28vw;
+  z-index: 1;
+  padding: 3vw;
+  background: #aaa;
+}
+#card #mainLogo {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+#cover {
+  background: rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  position: absolute;
+  z-index: 29;
+  pointer-events: none;
+}
+#crosshair {
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  z-index: 12;
+  -webkit-transform: scale(0.2) translateZ(0);
+  transform: scale(0.2) translateZ(0);
+  pointer-events: none;
+}
+#xcvb div {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  background: #111;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 20% 20%, 20% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 20% 20%, 20% 100%, 0 100%);
+  pointer-events: none;
+}
+#xcvb div:after {
+  content: " ";
+  width: 35%;
+  height: 35%;
+  z-index: 16;
+  display: block;
+  pointer-events: none;
+}
+#x1:after {
+  background: #daa;
+}
+#xcvb #x2 {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+#x2:after {
+  background: #ada;
+}
+#xcvb #x3 {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#x3:after {
+  background: #dda;
+}
+#xcvb #x4 {
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#x4:after {
+  background: #aad;
+}
+#cross {
+  width: 33.3%;
+  height: 33.3%;
+  position: absolute;
+  z-index: 9;
+  top: 46%;
+  left: 46%;
+  pointer-events: none;
+}
+#cross div {
+  border: #111 solid 0.5vw;
+  background: #111;
+  width: var(--crossSize);
+  left: calc(-0.5 * var(--crossSize) + 4vw);
+  -webkit-transform: translateY(calc(4.2vw - 0.6vw)) translateZ(0);
+  transform: translateY(calc(4.2vw - 0.6vw)) translateZ(0);
+  position: absolute;
+}
+#cross #line2 {
+  -webkit-transform: translateY(calc(4.2vw - 0.6vw)) rotate(90deg) translateZ(0);
+  transform: translateY(calc(4.2vw - 0.6vw)) rotate(90deg) translateZ(0);
+}
+.navbar {
+  width: 100%;
+  background: #222;
+  padding: 2vw;
+  position: relative;
+}
+.navbar .logo {
+  width: 20%;
+  height: 100%;
+}
+.navbar * {
+  display: block;
+}
+.navbar #links {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: #222;
+  width: 100vw;
+  top: 12.2vw;
+  left: 0;
+  z-index: 22;
+}
+.navbar #links.active {
+  display: block;
+}
+.navbar a {
+  color: #eee;
+  margin-left: 0;
+  line-height: 15vw;
+  font-size: 5vw;
+  padding-left: 5vw;
+}
+.navbar #links a:hover {
+  background: #444;
+}
+.navbar #menuBtn {
+  position: absolute;
+  width: 23%;
+  top: 0;
+  right: 0;
+  line-height: 12vw;
+  font-weight: 600;
+  font-size: 5vw;
+}
+.navbar #menuBtn.active {
+  background: #ccc;
+  color: #000;
+}
+@media (min-width: 800px) {
+  .navbar {
+    display: -webkit-box;
+    display: flex;
+    align-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+  .navbar #links,
+  .navbar a {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    top: 0;
+  }
+  .navbar #menuBtn {
+    display: none;
+  }
+  .navbar .logo {
+    width: 20%;
+    height: 100%;
+  }
+  .navbar a {
+    margin-left: 9vw;
+    line-height: 8vw;
+    font-size: 4vw;
+  }
+}
+#brands {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.7vw;
+  width: 60%;
+  height: 60%;
+}
+.icon {
+  width: 10.5vw;
+  height: 10.5vw;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 1.7vw;
+  position: absolute;
+  pointer-events: all;
+}
+#inst {
+  border-radius: 1.7vw;
+  background: linear-gradient(145deg, #3051f1 10%, #c92bb7 70%) no-repeat;
+  z-index: 1;
+}
+#inst:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  background: radial-gradient(
+      circle farthest-corner at 28% 100%,
+      #fcdf8f 0,
+      #fbd377 10%,
+      #fa8e37 22%,
+      #f73344 35%,
+      rgba(247, 51, 68, 0) 65%
+    )
+    no-repeat;
+  border-radius: 1.7vw;
+  z-index: 3;
+}
+#inst a.svg {
+  position: relative;
+  display: inline-block;
+  z-index: 6;
+  pointer-events: all;
+}
+.icon svg {
+  width: 80%;
+  display: block;
+  margin: auto;
+  fill: #fff;
+  pointer-events: all;
+}
+#twit {
+  background: #1ca0f0;
+  top: 0;
+  right: 0;
+}
+#rdt {
+  background: #f40;
+  left: 0;
+  bottom: 0;
+}
+#tsp {
+  background: #282562;
+  bottom: 0;
+  right: 0;
+}
+#tsp svg {
+  fill: #ed2761;
+}
+#videos {
+  background: #222;
+  padding: 10vw 7vw;
+  font-size: 4vw;
+}
+#videos h1 {
+  color: #eee;
+  font-size: 8vw;
+  margin-bottom: 3vw;
+  font-weight: 500;
+}
+#videos iframe {
+  display: block;
+  margin: 13vw auto auto auto;
+  width: 70vw;
+  height: 41vw;
+  border: 0;
+  box-shadow: 0 0 9px #eee;
+}
+
+#videos #ytVidLink {
+  display: block;
+  margin-top: 9vw;
+  width: 41%;
+  margin-left: auto;
+  margin-right: auto;
+  border: #eee solid 2px;
+  border-radius: 5px;
+  padding: 2vw;
+  /* background: #eee;*/
+  color: #eee;
+  font-weight: 400;
+  font-size: 6vw;
+}
+
+#videos #timerLink {
+  color: #ccc;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vw;
+  text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+  #videos iframe {
+    width: 100%;
+    height: 30vw;
+    margin: 0;
+  }
+  #vidBody {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  #videos #ytVidLink {
+    font-size: 3vw;
+    width: 45%;
+  }
+
+  #videos #timerLink {
+    padding: 0;
+    font-size: 1.5vw;
+  }
+}
