@@ -18,9 +18,10 @@ $.ajax({
       var date = info.publishedAt;
       dates.push(date);
     }
+    /*
     dates.sort(function (a, b) {
       return a < b;
-    });
+    });*/
     var initDate = new Date();
     var base = new Date(dates[0]);
     var timePassed = initDate - base;
