@@ -38,6 +38,5 @@ function themeChanger() {
   } else {
     s = i - 1;
   }
-
 }
 setInterval(themeChanger, 3000);

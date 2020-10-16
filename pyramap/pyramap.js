@@ -18,7 +18,7 @@ $(function () {
   }
 
   var mouse = {
-      start: {}
+      start: {},
     },
     touch = document.ontouchmove !== undefined,
     viewport = {
@@ -36,7 +36,7 @@ $(function () {
       },
       reset: function () {
         this.move({ x: 0, y: 0 });
-      }
+      },
     };
 
   viewport.duration = (function () {
@@ -96,7 +96,7 @@ $(function () {
             : null;
           $(".viewport").trigger("move-viewport", {
             x: event.pageX,
-            y: event.pageY
+            y: event.pageY,
           });
         }
       });
@@ -133,7 +133,7 @@ $(function () {
         parseInt((mouse.start.y - movedMouse.y) / movementScaleFactor),
       y:
         viewport.y -
-        parseInt((mouse.start.x - movedMouse.x) / movementScaleFactor)
+        parseInt((mouse.start.x - movedMouse.x) / movementScaleFactor),
     });
 
     mouse.last.x = movedMouse.x;
@@ -143,11 +143,10 @@ $(function () {
       return v1 >= v2 ? true : false;
     }
   });
-    //make hint show after 1.6 seconds
-    setTimeout(function () {
-      $("#clickndrag").css({ display: "initial" });
-    }, 1600);
-  
+  //make hint show after 1.6 seconds
+  setTimeout(function () {
+    $("#clickndrag").css({ display: "initial" });
+  }, 1600);
 });
 
 $("#help").click(function () {

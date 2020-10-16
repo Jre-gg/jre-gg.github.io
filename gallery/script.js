@@ -14,8 +14,8 @@ var wallIsoObj = $(".grid").isotope({
   layoutMode: "masonryHorizontal",
   itemSelector: ".grid-item",
   masonryHorizontal: {
-    rowHeight: ".grid-sizer"
-  }
+    rowHeight: ".grid-sizer",
+  },
 });
 var delayApi = false;
 var $grid = wallIsoObj;
@@ -160,7 +160,7 @@ function refresh() {
   delayApi = false;
   changeTutorialImg();
   hideLoading();
-if (wall.width() < container.width() && sortTime != "day") {
+  if (wall.width() < container.width() && sortTime != "day") {
     test += 1;
     loadImg();
   }
@@ -185,7 +185,7 @@ function paramSet() {
       q: "flair:fanart",
       limit: 5,
       restrict_sr: true,
-      after: after
+      after: after,
     };
     // return t;
   } else {
@@ -194,7 +194,7 @@ function paramSet() {
       q: "flair:fanart",
       limit: 10,
       restrict_sr: true,
-      after: after
+      after: after,
     };
   }
 }
@@ -265,7 +265,7 @@ function loadImg() {
         error: function (xhr) {
           //Do Something to handle error
           console.log("err");
-        }
+        },
       });
     } else {
       alert(

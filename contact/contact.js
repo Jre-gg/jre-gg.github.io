@@ -30,7 +30,7 @@ $(document).ready(function () {
       unhighlight: function (element, errorClass) {
         $("label").removeClass("error");
         $(element).closest(".f").removeClass("is-danger");
-      }
+      },
     });
   });
 });

@@ -4,7 +4,7 @@ $(function () {
   var scrHeight = $(window).height();
   var scrRatio = scrWidth / scrHeight;
   var playAnim = localStorage.getItem("play");
-  
+
   $("#menuBtn").click(function () {
     if (!menuActive) {
       $("#menuBtn, #links").addClass("active");
@@ -36,7 +36,7 @@ function anim() {
     "3vw + " + lpw + " - 10vw",
     "42vw + " + lpw + " - 4vw",
     "11vw + " + lpw + " - 6vw",
-    "11vw + " + lpw + " - 6vw"
+    "11vw + " + lpw + " - 6vw",
   ];
   var vOffArr = [0.5, 2.1, 1.2, 1, 1.24];
   var chKf = [
@@ -44,8 +44,8 @@ function anim() {
       translateX: "calc(2vw + " + hOffArr[0] + ")",
       translateY: "calc(2vw + " + vOffArr[0] * cph + "px)",
       scale: ".2",
-      duration: 0
-    }
+      duration: 0,
+    },
   ];
   var z = "calc(" + "24vw" + " + " + vOffArr[0] * cph + "px), ";
   var zz = "calc(0% + " + hOffArr[0] + ") ";
@@ -69,15 +69,15 @@ function anim() {
         zzzz +
         zz +
         "0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 0
-    }
+      duration: 0,
+    },
   ];
   var durArr = [
     chDur * 0.1,
     chDur * 0.1,
     chDur * 0.1,
     chDur * 0.1,
-    chDur * 0.1
+    chDur * 0.1,
   ];
   var chDelArr = [0, 200, 200, 200, 200];
   var cvDelArr = [0, 200, 200, 200, chDur * 0.1];
@@ -92,7 +92,7 @@ function anim() {
       translateX: "calc(2vw + " + hOff + ")",
       translateY: "calc(2vw + " + vOff + ")",
       duration: durArr[x],
-      delay: chDelArr[x]
+      delay: chDelArr[x],
     });
     var dim = "24vw";
     var v1 = "calc(" + dim + " + " + vOff + ")" + ", ";
@@ -117,14 +117,14 @@ function anim() {
         h2 +
         " 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: durArr[x],
-      delay: cvDelArr[x]
+      delay: cvDelArr[x],
     });
   }
   chKf.push({ scale: 0.7 });
   startCh.add({
     targets: "#crosshair",
     keyframes: chKf,
-    easing: "easeInOutExpo"
+    easing: "easeInOutExpo",
   });
   anime({ targets: "#cross", delay: 6200, opacity: 0, duration: 1200 });
   let cover = anime.timeline({ duration: 7000, easing: "easeInOutExpo" });
@@ -136,19 +136,19 @@ function anim() {
 function noPlayAnim() {
   var logoPos = $("#mainLogo").offset();
   var lpw = logoPos.left + "px";
-  var tOff = .39*logoPos.top;
+  var tOff = 0.39 * logoPos.top;
   var lph = tOff + "px";
   anime({
     targets: "#cover, #cross",
     opacity: 0,
-    duration: 1
+    duration: 1,
   });
   anime({
     targets: "#crosshair",
     scale: 0.7,
     translateX: "calc(6vw + " + lpw + " - 39vw)",
     translateY: lph,
-    duration: 1
+    duration: 1,
   });
 }
 
@@ -171,6 +171,6 @@ function getLatestVid() {
           ">WATCH →</a>"
       );
       $("#vidWrap").html('<iframe id="latestVid" src=' + embedLink + " />");
-    }
+    },
   });
 }
