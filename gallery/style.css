@@ -161,7 +161,7 @@ select {
 .grid-item {
   float: left;
   height: 31%;
-  margin: .8vh;
+  margin: 0.8vh;
 }
 
 .grid-item img {

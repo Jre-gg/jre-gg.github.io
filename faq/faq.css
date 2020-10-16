@@ -1,23 +1,29 @@
 /*thanks Brenden Palmer for accordion code*/
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Nunito Bold'), local('Nunito-Bold'), url(/fonts/nunitoBold.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local("Nunito Bold"), local("Nunito-Bold"),
+    url(/fonts/nunitoBold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lato Regular'), local('Lato-Regular'), url(/fonts/lato.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local("Lato Regular"), local("Lato-Regular"),
+    url(/fonts/lato.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
 }
 
@@ -34,7 +40,7 @@ p:first-of-type {
   font-style: italic;
 }
 
-p:nth-of-type(2n){
+p:nth-of-type(2n) {
   font-weight: bold;
 }
 
@@ -49,7 +55,7 @@ p:nth-of-type(2n){
 }
 
 h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 2.5em;
 }
@@ -70,21 +76,21 @@ ul .inner.show {
 }
 
 ul li {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
-ul li a.toggle{
+ul li a.toggle {
   width: 100%;
   display: block;
   animation: change-background 8s infinite;
   color: #fefefe;
-  opacity: .7;
-  padding: .75em;
+  opacity: 0.7;
+  padding: 0.75em;
   font-weight: bold;
 }
 
-h2{
-  color: rgb(0,0,0,.67);
+h2 {
+  color: rgb(0, 0, 0, 0.67);
 }
 /*
 #test a.toggle{
@@ -96,55 +102,55 @@ ul li a.toggle:hover {
   background: rgba(0, 0, 0, 0.9);
 }*/
 
-.navbar{
-  color:white;
+.navbar {
+  color: white;
 }
 
-#logo{
-  font-family: 'Permanent Marker', cursive;
+#logo {
+  font-family: "Permanent Marker", cursive;
 }
 
-.current-page{
+.current-page {
   font-weight: 700;
- /* background: #555;*/
+  /* background: #555;*/
 }
 
-.faq.red{
+.faq.red {
   color: red;
 }
 
-.faq.green{
+.faq.green {
   color: green;
 }
 
-.faq.blue{
+.faq.blue {
   color: blue;
 }
 
-.faq.purple{
+.faq.purple {
   color: purple;
 }
 
-.toggle.red{
+.toggle.red {
   background-color: red;
 }
 
-.toggle.green{
+.toggle.green {
   background-color: green;
 }
 
-.toggle.blue{
+.toggle.blue {
   background-color: blue;
 }
 
-.toggle.purple{
+.toggle.purple {
   background-color: purple;
 }
 
-.inner li a.toggle{
-  opacity: .9;
+.inner li a.toggle {
+  opacity: 0.9;
 }
 
-h2{
+h2 {
   font-weight: bold;
 }

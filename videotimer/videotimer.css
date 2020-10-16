@@ -26,7 +26,7 @@ body {
   width: 400px;
   height: 188px;
   -webkit-clip-path: url("#b");
-          clip-path: url("#b");
+  clip-path: url("#b");
 }
 
 #symbol {
@@ -49,7 +49,7 @@ body {
 
 #posterWrap {
   -webkit-filter: drop-shadow(0px 9px 7px #111) grayscale(15%);
-          filter: drop-shadow(0px 9px 7px #111) grayscale(15%);
+  filter: drop-shadow(0px 9px 7px #111) grayscale(15%);
 }
 
 #poster {
@@ -59,8 +59,28 @@ body {
   background: #f5f8de;
   display: block;
   margin: auto;
-  -webkit-clip-path: polygon(0% 0%, 0% 95%, 7% 100%, 100% 100%, 100% 0%, 55% 0%, 56% 7%, 52% 2%, 35% 0%);
-          clip-path: polygon(0% 0%, 0% 95%, 7% 100%, 100% 100%, 100% 0%, 55% 0%, 56% 7%, 52% 2%, 35% 0%);
+  -webkit-clip-path: polygon(
+    0% 0%,
+    0% 95%,
+    7% 100%,
+    100% 100%,
+    100% 0%,
+    55% 0%,
+    56% 7%,
+    52% 2%,
+    35% 0%
+  );
+  clip-path: polygon(
+    0% 0%,
+    0% 95%,
+    7% 100%,
+    100% 100%,
+    100% 0%,
+    55% 0%,
+    56% 7%,
+    52% 2%,
+    35% 0%
+  );
 }
 
 .shadow {
@@ -68,7 +88,7 @@ body {
   height: 500px;
   background: rgba(0, 0, 0, 0.15);
   -webkit-clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
-          clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+  clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
 }
 
 span {
@@ -83,9 +103,9 @@ span {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #daysW {
@@ -125,7 +145,7 @@ span {
   font-size: 18px;
   color: #333;
   -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .digit {
@@ -133,7 +153,7 @@ span {
   line-height: 28px;
   color: #b30000;
   -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 #footer {
@@ -168,7 +188,7 @@ span {
     width: 320px;
     height: 150px;
     -webkit-clip-path: url("#a");
-            clip-path: url("#a");
+    clip-path: url("#a");
   }
 
   #symbol {
@@ -190,7 +210,7 @@ span {
 
   .shadow {
     -webkit-clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
-            clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
+    clip-path: polygon(35% 0%, 52% 1%, 56% 7%);
   }
 
   #wrap {
