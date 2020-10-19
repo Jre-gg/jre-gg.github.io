@@ -122,32 +122,32 @@ function minUrl() {
   if (dpi > 1) {
     res = "2x";
     if (avWidth <= 400) {
-      user = "bpmgbkqwkp";
+      user = galleryKeys.resTwoMob;
       size = "400x400";
     } else if (avWidth <= 600) {
-      user = "wcmwmkwxpt";
+      user = galleryKeys.resTwoMob2;
       size = "600x600";
     } else if (avWidth <= 800) {
-      user = "rxthrwrpkz";
+      user = galleryKeys.resTwoTab;
       size = "800x800";
     } else if (avWidth > 800) {
-      user = "dcrddzxjlb";
+      user = galleryKeys.resTwoDk;
       size = "1000x1000";
     } else {
     }
   } else {
     res = "1x";
     if (avWidth <= 400) {
-      user = "kbbpdgwvxk";
+      user = galleryKeys.resMob;
       size = "400x400";
     } else if (avWidth <= 600) {
-      user = "fnkfghcfjw";
+      user = galleryKeys.resMob2;
       size = "600x600";
     } else if (avWidth <= 800) {
-      user = "ptjtpbzzkg";
+      user = galleryKeys.resTab;
       size = "800x800";
     } else if (avWidth > 800) {
-      user = "jmjnpqkxls";
+      user = galleryKeys.resDk;
       size = "1000x1000";
     } else {
     }
