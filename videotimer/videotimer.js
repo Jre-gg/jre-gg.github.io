@@ -5,8 +5,8 @@ $(function () {
     $("#curve2").attr("d", "M 5 70 C 100 92 231 93 332 32");
   }
 
-  var apiKey = localStorage.getItem("vtYtKey");
-  alert(localStorage.getItem("vtYtKey"));
+  var apiKey = vtYtKey;
+    
   $.ajax({
     url:
       "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key=" +
