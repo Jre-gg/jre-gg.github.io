@@ -5,7 +5,7 @@ $(function () {
     $("#curve2").attr("d", "M 5 70 C 100 92 231 93 332 32");
   }
 
-  var apiKey = "AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg";
+  var apiKey = ytKey;
 
   $.ajax({
     url:

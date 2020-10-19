@@ -153,7 +153,7 @@ function noPlayAnim() {
 }
 
 function getLatestVid() {
-  var apiKey = "AIzaSyDjKxX06waynYI-Y-Cc5W83kC1Y5-x5Nbg";
+  var apiKey = ytKey;
   $.ajax({
     url:
       "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUGSGPehp0RWfca-kENgBJ9Q&key=" +
