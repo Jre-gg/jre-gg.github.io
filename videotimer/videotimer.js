@@ -5,7 +5,7 @@ $(function () {
     $("#curve2").attr("d", "M 5 70 C 100 92 231 93 332 32");
   }
 
-  var apiKey = ytKey;
+  var apiKey = localStorage.getItem("vtYtKey");
 
   $.ajax({
     url:

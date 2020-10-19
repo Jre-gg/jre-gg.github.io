@@ -119,6 +119,7 @@ function minUrl() {
   var user;
   var size;
   var avWidth = $(window).width();
+  var galleryKeys = JSON.parse(localStorage.getItem("galleryKeys"));
   if (dpi > 1) {
     res = "2x";
     if (avWidth <= 400) {
