@@ -123,34 +123,32 @@ function minUrl() {
   if (dpi > 1) {
     res = "2x";
     if (avWidth <= 400) {
-      user = galleryKeys.resTwoMob;
+      user = "bpmgbkqwkp";
       size = "400x400";
     } else if (avWidth <= 600) {
-      user = galleryKeys.resTwoMob2;
+      user = "wcmwmkwxpt";
       size = "600x600";
     } else if (avWidth <= 800) {
-      user = galleryKeys.resTwoTab;
+      user = "rxthrwrpkz";
       size = "800x800";
-    } else if (avWidth > 800) {
-      user = galleryKeys.resTwoDk;
-      size = "1000x1000";
     } else {
-    }
+      user = "dcrddzxjlb";
+      size = "1000x1000";
+    } 
   } else {
     res = "1x";
     if (avWidth <= 400) {
-      user = galleryKeys.resMob;
+      user = "kbbpdgwvxk";
       size = "400x400";
     } else if (avWidth <= 600) {
-      user = galleryKeys.resMob2;
+      user = "fnkfghcfjw";
       size = "600x600";
     } else if (avWidth <= 800) {
-      user = galleryKeys.resTab;
+      user = "ptjtpbzzkg";
       size = "800x800";
-    } else if (avWidth > 800) {
-      user = galleryKeys.resDk;
-      size = "1000x1000";
     } else {
+      user = "jmjnpqkxls";
+      size = "1000x1000";
     }
   }
   min = "https://img.gs/" + user + "/" + size + "," + res + ",quality=low/";
