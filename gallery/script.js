@@ -134,7 +134,7 @@ function minUrl() {
     } else {
       user = "dcrddzxjlb";
       size = "1000x1000";
-    } 
+    }
   } else {
     res = "1x";
     if (avWidth <= 400) {
